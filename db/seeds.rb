@@ -2,6 +2,10 @@ require_relative('../models/merchant.rb')
 require_relative('../models/transaction.rb')
 require_relative('../models/type.rb')
 
+Transaction.delete_all()
+Merchant.delete_all()
+Type.delete_all()
+
 merchant1 = Merchant.new({'merch_name' => 'Amazon'})
 merchant2 = Merchant.new({'merch_name' => 'Tesco'})
 

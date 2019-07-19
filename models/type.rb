@@ -56,11 +56,13 @@ class Type
     return types
   end
 
+  def self.delete_all()
+    sql = "DELETE FROM types"
+    SqlRunner.run(sql)
+  end
+
   def self.map_items(types_data)
     return types_data.map { |type| Type.new(type) }
   end
-
-
-
 
 end
