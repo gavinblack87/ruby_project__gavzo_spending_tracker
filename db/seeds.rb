@@ -2,8 +2,8 @@ require_relative('../models/merchant.rb')
 require_relative('../models/transaction.rb')
 require_relative('../models/type.rb')
 
-merchant1 = Merchant.new({'name' => 'Amazon'})
-merchant2 = Merchant.new({'name' => 'Tesco'})
+merchant1 = Merchant.new({'merch_name' => 'Amazon'})
+merchant2 = Merchant.new({'merch_name' => 'Tesco'})
 
 merchant1.save()
 merchant2.save()
