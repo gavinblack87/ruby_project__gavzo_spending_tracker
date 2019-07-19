@@ -13,6 +13,25 @@ class Transaction
   end
 
 
+  def save()
+      sql = "INSERT INTO transactions
+      (
+        type_id,
+        merch_id,
+        value
+      )
+      VALUES
+      (
+        $1, $2, $3
+      )
+      RETURNING id"
+      values = [@type_id, @merch_id, @value]
+      result = SqlRunner.run(sql, values)
+      id = result.first["id"]
+      @id = id.to_i
+    end
+
+
 
 
 end
