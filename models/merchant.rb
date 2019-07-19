@@ -40,6 +40,26 @@ class Merchant
     SqlRunner.run(sql, values)
   end
 
+  def self.find(id)
+    sql = "SELECT * FROM merchants
+    WHERE id = $1"
+    values = [id]
+    result = SqlRunner.run(sql ,values).first
+    merchant = Merchant.new(result)
+    return merchant
+  end
+
+  def self.all()
+    sql = "SELECT * FROM merchants"
+    merchant_data = SqlRunner.run(sql)
+    merchants = map_items(merchant_data)
+    return merchants
+  end
+
+  def self.map_items(merchant_data)
+    return merchant_data.map { |merchant| Merchant.new(merchant) }
+  end
+
 
 
 
