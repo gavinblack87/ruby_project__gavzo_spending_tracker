@@ -40,6 +40,26 @@ class Type
     SqlRunner.run(sql, values)
   end
 
+  def self.find(id)
+    sql = "SELECT * FROM types
+    WHERE id = $1"
+    values = [id]
+    result = SqlRunner.run(sql ,values).first
+    types = Type.new(result)
+    return types
+  end
+
+  def self.all()
+    sql = "SELECT * FROM types"
+    types_data = SqlRunner.run(sql)
+    types = map_items(types_data)
+    return types
+  end
+
+  def self.map_items(types_data)
+    return types_data.map { |type| Type.new(type) }
+  end
+
 
 
 
