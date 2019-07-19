@@ -26,6 +26,20 @@ class Type
       @id = id.to_i
   end
 
+  def update()
+    sql = "UPDATE types
+    SET
+    (
+      type_name
+    ) =
+    (
+      $1
+    )
+    WHERE id = $2"
+    values = [@type_name, @id]
+    SqlRunner.run(sql, values)
+  end
+
 
 
 
