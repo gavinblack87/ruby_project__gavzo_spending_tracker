@@ -1,12 +1,11 @@
-DROP TABLE merchants;
-DROP TABLE types;
 DROP TABLE transactions;
+DROP TABLE types;
+DROP TABLE merchants;
 
-CREATE TABLE transactions (
+
+CREATE TABLE merchants (
   id SERIAL4 primary key,
-  type_id INT4 REFERENCES types(id),
-  merchant_id INT4 REFERENCES merchants(id),
-  value INT4
+  merch_name VARCHAR(255)
 );
 
 CREATE TABLE types (
@@ -14,7 +13,9 @@ CREATE TABLE types (
   type_name VARCHAR(255)
 );
 
-CREATE TABLE merchants (
+CREATE TABLE transactions (
   id SERIAL4 primary key,
-  merchant_name VARCHAR(255)
+  type_id INT4 REFERENCES types(id),
+  merch_id INT4 REFERENCES merchants(id),
+  value INT4
 );

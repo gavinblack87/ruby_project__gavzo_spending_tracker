@@ -23,7 +23,6 @@ transaction2 = Transaction.new({
   'type_id' => type1.id,
   'merch_id' => merchant2.id,
   'value' => 22 })
-  })
 
 transaction1.save()
 transaction2.save()
