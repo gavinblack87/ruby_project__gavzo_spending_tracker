@@ -24,7 +24,7 @@ class Type
       result = SqlRunner.run(sql, values)
       id = result.first["id"]
       @id = id.to_i
-    end
+  end
 
 
 
