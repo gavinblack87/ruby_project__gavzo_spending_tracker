@@ -6,6 +6,11 @@ also_reload('./models/*')
 
 
 get '/transactions' do
-  @transactions = Transactions.all
+  @transactions = Transaction.all
   erb(:index)
+end
+
+get '/transactions/:id' do
+  @transactions = Transaction.find(params['id'])
+  erb(:show)
 end

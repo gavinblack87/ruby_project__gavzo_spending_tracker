@@ -1,4 +1,5 @@
 require_relative('../db/sql_runner')
+require_relative('./type.rb')
 
 class Transaction
 
@@ -30,6 +31,16 @@ class Transaction
       id = result.first["id"]
       @id = id.to_i
     end
+
+  def type()
+    type = Type.find(@type_id)
+    return type
+  end
+
+  def merchant()
+    merchant = Merchant.find(@merch_id)
+    return merchant
+  end
 
   def update()
     sql = "UPDATE transactions
