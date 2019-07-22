@@ -16,6 +16,11 @@ get '/transactions/new' do
   erb(:new)
 end
 
+post '/transactions' do
+  Transaction.new(params).save
+  redirect to '/transactions'
+end
+
 get '/transactions/:id' do
   @transactions = Transaction.find(params['id'])
   erb(:show)
