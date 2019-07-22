@@ -14,9 +14,22 @@ merchant2.save()
 
 type1 = Type.new({'type_name' => 'Entertainment'})
 type2 = Type.new({'type_name' => 'Groceries'})
+type3 = Type.new({'type_name' => 'Bills'})
+type4 = Type.new({'type_name' => 'Eating out'})
+type5 = Type.new({'type_name' => 'Shopping'})
+type6 = Type.new({'type_name' => 'Finances'})
+type7 = Type.new({'type_name' => 'Family'})
+type8 = Type.new({'type_name' => 'General'})
+
 
 type1.save()
 type2.save()
+type3.save()
+type4.save()
+type5.save()
+type6.save()
+type7.save()
+type8.save()
 
 transaction1 = Transaction.new({
    'type_id' => type2.id,

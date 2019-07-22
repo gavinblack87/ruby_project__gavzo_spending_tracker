@@ -47,14 +47,14 @@ class Transaction
     SET
     (
       type_id,
-      merchant_id,
+      merch_id,
       value
     ) =
     (
       $1, $2, $3
     )
     WHERE id = $4"
-    values = [@type_id, @merchant_id, @value, @id]
+    values = [@type_id, @merch_id, @value, @id]
     SqlRunner.run(sql, values)
   end
 

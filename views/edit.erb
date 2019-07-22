@@ -1,0 +1,43 @@
+<h2>Edit <%= @transactions.id %></h2>
+<form method="POST" action="/transactions/<%= @transactions.id %>">
+  <div class="form-wrapper">
+
+    <div class="form-el">
+      <label for="merchant_name">Merchant Name:</label>
+      <select class="merch_id" id="merchant_name" selected="<%= @transactions.merchant.merch_name%>">
+        <% @merchants.each do |merchant| %>
+          <% if merchant.id == @transactions.merch_id %>
+            <option value=<%= merchant.id %>selected><%= merchant.merch_name.capitalize %></option>
+            <% else %>
+            <option value=<%= merchant.id %>><%= merchant.merch_name.capitalize %></option>
+            <% end %>
+        <% end %>
+      </select>
+    </div>
+
+
+
+    <div class="form-el">
+      <label for="type_select"> Transaction type:</label>
+      <select name="type_id" id="type_select" selected="<%= @transactions.type.type_name%>">
+        <% @type.each do |type| %>
+          <% if type.id == @transactions.type_id %>
+            <option value=<%= type.id %> selected><%= type.type_name.capitalize %></option>
+          <% else %>
+            <option value=<%= type.id %>><%= type.type_name.capitalize %></option>
+          <% end %>
+        <% end %>
+      </select>
+    </div>
+
+    <div class="form-el">
+      <label for="value">Value:</label>
+      <input type="number" name="value" id="value" value="<%= @transactions.value %>"/>
+    </div>
+
+    <div class="form-el">
+      <input type="submit" value="Update Transaction"/>
+    </div>
+
+  </div>
+</form>
