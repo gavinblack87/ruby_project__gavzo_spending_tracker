@@ -3,16 +3,22 @@
 <head>
   <title>Gavzo Spending Tracker</title>
   <link href="https://fonts.googleapis.com/css?family=Amarante|Rye" rel="stylesheet">
-  <link rel="stylesheet" href="/style.css">
+
+  <link rel="icon" href="/images/gavzo_background.jpg" />
+
+  <link rel="stylesheet" type="text/css" href="/styles/form.css">
+  <link rel="stylesheet" type="text/css" href="/styles/structure.css">
 </head>
 <body>
-  <h1 id="logo">Gavzo</h1>
+
+  <h1>MONEYGO</h1>
   <nav id="menu">
+
     <li class="menu-item"><a href='/'>Home</a></li>
-    <li class="menu-item"><a href='/transactions/'>Transactions</a>
+    <li class="menu-item"><a href='/transactions'>Transactions</a>
       <ul>
           <li class="menu-item"><a href='/transactions/new'>New transaction</a></li>
-          <li class="menu-item"><a href='/transactions/'>Edit transactions</a></li>
+          <li class="menu-item"><a href='/transactions'>Edit transactions</a></li>
       </ul>
     </li>
     <li class="menu-item"><a href='/merchant/'>View merchants</a>
@@ -31,7 +37,7 @@
 
   </nav>
 
-  <%= yield %>
+<%= yield %>
 
 </body>
 </html>

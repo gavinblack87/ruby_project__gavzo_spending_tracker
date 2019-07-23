@@ -8,10 +8,17 @@ require_relative('../models/type.rb')
 also_reload('../models/*')
 
 #view all transactions
-get '/transactions/' do
-  @transactions = Transaction.all
+get '/transactions' do
+  @transactions = Transaction.all()
   @total_transactions = Transaction.total()
   erb(:"transactions/index")
+end
+
+#sort by date
+get '/transactions/sort_by_date' do
+    @transactions = Transaction.arrange_by_date()
+    @total_transactions = Transaction.total()
+    erb(:"transactions/sort_by_date")
 end
 
 #create new transaction
@@ -21,9 +28,9 @@ get '/transactions/new' do
   erb(:"transactions/new")
 end
 
-post '/transactions/' do
+post '/transactions' do
   Transaction.new(params).save
-  redirect to '/transactions/'
+  redirect to '/transactions'
 end
 
 
@@ -50,8 +57,10 @@ end
 
 post '/transactions/:id/delete' do
   Transaction.destroy(params[:id])
-  redirect to "/transactions/"
+  redirect to "/transactions"
 end
+
+
 
 get '/merchant/' do
   @merchants = Merchant.all

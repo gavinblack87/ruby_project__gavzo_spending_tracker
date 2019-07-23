@@ -1,10 +1,11 @@
 require_relative('../db/sql_runner')
 require_relative('./type.rb')
+require('pry')
 
 class Transaction
 
-  attr_accessor :type_id, :merch_id, :value
-  attr_reader :id, :trans_date
+  attr_accessor :type_id, :merch_id, :value, :trans_date
+  attr_reader :id
 
   def initialize(options)
     @id = options['id'].to_i if options['id']
@@ -79,12 +80,23 @@ class Transaction
       return transaction
     end
 
+
+    def self.arrange_by_date()
+      sql = "SELECT * FROM transactions
+      ORDER BY trans_date ASC"
+      transaction_data = SqlRunner.run(sql)
+      transactions = map_items(transaction_data)
+      return transactions
+    end
+
     def self.all()
       sql = "SELECT * FROM transactions"
       transaction_data = SqlRunner.run(sql)
       transactions = map_items(transaction_data)
       return transactions
     end
+
+
 
     def self.delete_all()
       sql = "DELETE FROM transactions"
