@@ -10,32 +10,53 @@
   <link rel="stylesheet" type="text/css" href="/styles/structure.css">
 </head>
 <body>
-
   <h1>MONEYGO</h1>
-  <nav id="menu">
+  <h2>The ultimate spending tracker app!</h2>
 
-    <li class="menu-item"><a href='/'>Home</a></li>
-    <li class="menu-item"><a href='/transactions'>Transactions</a>
-      <ul>
-          <li class="menu-item"><a href='/transactions/new'>New transaction</a></li>
-          <li class="menu-item"><a href='/transactions'>Edit transactions</a></li>
-      </ul>
-    </li>
-    <li class="menu-item"><a href='/merchant/'>View merchants</a>
-      <ul>
-        <li class="menu-item"><a href='/merchant/new'>Add Merchant</a></li>
-      </ul>
-    </li>
-    <li class="menu-item"><a href='/types/'>View Types</a>
-    </li>
-    <li class="menu-item"><a href='/budget/'>Budget</a>
-      <ul>
-        <li class="menu-item"><a href="/budget/edit">Edit Budget</a>
-        </li>
-      </ul>
-    </li>
+  <p>Spend, Save & Track!</p>
+<div class="navbar">
+  <a href="/">Home</a>
 
-  </nav>
+  <div class="dropdown">
+    <button class="dropbtn">Transactions
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="/transactions">View all</a>
+      <a href="/transactions/new">New Transaction</a>
+      <a href="/transactions">Edit Transactions</a>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <button class="dropbtn">Merchants
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="/merchant/">View all</a>
+      <a href="/merchant/new">Add Merchant</a>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <button class="dropbtn">Types
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="/types/">View all</a>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <button class="dropbtn">Budget
+      <i class="fa fa-caret-down"></i>
+    </button>
+  </div>
+
+
+
+</div>
+
 
 <%= yield %>
 
