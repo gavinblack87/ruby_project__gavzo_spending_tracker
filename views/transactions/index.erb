@@ -1,0 +1,30 @@
+<h2>Transactions</h2>
+
+
+
+<div id="transaction-wrapper">
+  <div class="btn-group sort-button-group pull-right">
+      <button class="btn btn-default" data-sort-direction="asc" data-sort-value="trans_date" type="button">Sort by Date </button>
+  </div>
+
+  <% @transactions.each do |transaction| %>
+
+  <div class="transaction">
+
+    <h3><a href="/transactions/<%= transaction.id %>"></a></h3>
+    <p>Type: <%= transaction.type.type_name %></p>
+    <p>Merchant: <%= transaction.merchant.merch_name %></p>
+    <p>Value: <%= transaction.value %></p>
+    <p>Date: <%= transaction.trans_date %></p>
+    <a href="/transactions/<%= transaction.id %>/edit" class="button">Edit</a>
+    <hr>
+
+  </div>
+
+
+  <% end %>
+</div>
+  <div class="total_spend">
+    <p>Total Spending : <%= "£#{@total_transactions}" %></p>
+
+  </div>

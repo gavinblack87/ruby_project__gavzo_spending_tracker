@@ -34,12 +34,16 @@ type8.save()
 transaction1 = Transaction.new({
    'type_id' => type2.id,
    'merch_id' => merchant1.id,
-   'value' => 11 })
+   'value' => 11,
+   'trans_date' => '01/01/2000'
+   })
 
 transaction2 = Transaction.new({
   'type_id' => type1.id,
   'merch_id' => merchant2.id,
-  'value' => 22 })
+  'value' => 22,
+'trans_date' => '02/02/2002'
+  })
 
 transaction1.save()
 transaction2.save()

@@ -4,7 +4,7 @@
 
     <div class="form-el">
       <label for="merchant_name">Merchant Name:</label>
-      <select class="merch_id" id="merchant_name" selected="<%= @transactions.merchant.merch_name%>">
+      <select name="merch_id" id="merch_id" selected="<%= @transactions.merchant.merch_name%>">
         <% @merchants.each do |merchant| %>
           <% if merchant.id == @transactions.merch_id %>
             <option value=<%= merchant.id %>selected><%= merchant.merch_name.capitalize %></option>
@@ -33,6 +33,11 @@
     <div class="form-el">
       <label for="value">Value:</label>
       <input type="number" name="value" id="value" value="<%= @transactions.value %>"/>
+    </div>
+
+    <div class="form-el">
+      <label for="date">Date:</label>
+      <input type=date name="trans_date" id="date"/>
     </div>
 
     <div class="form-el">

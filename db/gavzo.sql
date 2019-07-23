@@ -17,5 +17,6 @@ CREATE TABLE transactions (
   id SERIAL4 primary key,
   type_id INT4 REFERENCES types(id),
   merch_id INT4 REFERENCES merchants(id),
-  value INT4
+  value INT4,
+  trans_date DATE
 );
