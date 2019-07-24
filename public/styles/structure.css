@@ -1,6 +1,6 @@
 body {
-  background: black url('/images/gavzo_background.jpg');
-  background-attachment: scroll;
+  background: url('/images/gavzo_background.jpg');
+  background-attachment: fixed;
   background-size: 100%;
   background-repeat: no-repeat;
   color: darkgreen;
@@ -28,6 +28,7 @@ h1 {
 
 p {
   text-align:  center;
+  font-size:
 }
 
 .navbar {
@@ -122,7 +123,7 @@ main {
 }
 
 .flex {
-  display: flex;
+  display: inline-block;
 }
 
 .flex--row {
@@ -141,4 +142,16 @@ main {
   width: 200px;
   display: inline-block;
   align-items: center;
+}
+
+.form-el  {
+  text-align:center;
+  display: inline-block;
+  vertical-align: bottom;
+  width: 160px;
+  margin: 0 1em 0 0;
+}
+
+.button {
+  color: blue;
 }
