@@ -9,6 +9,11 @@ body {
   margin: 0px;
 }
 
+.home {
+  font-size: 50px;
+  text-align: left;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Courier New', cursive;
   margin: 0px;
@@ -26,15 +31,24 @@ h1 {
   border-color: darkgreen;
 }
 
+h2.title {
+  font-size: 2.5em;
+  color: white;
+  margin-bottom: 20px;
+  text-align: center;
+  text-shadow: 2px 2px 4px #000000;
+}
+
 p {
   text-align:  center;
-  font-size:
+  font-family: Courier;
 }
 
 .navbar {
   overflow: hidden;
+  opacity: 0.8;
   background-color: darkgreen;
-  font-family: Arial;
+  font-family: Courier;
 }
 
 .navbar a {
@@ -94,7 +108,7 @@ p {
 
 
 a, a:link, a:visited {
-  color: white;
+  color: maroon;
   text-decoration: none;
 }
 
@@ -136,11 +150,11 @@ main {
 }
 
 .transaction {
-  border: 5px double;
+  border: 20px double;
   margin: 0 35px 30px 0;
   padding: 25px;
-  width: 200px;
-  display: inline-block;
+  width: auto;
+  display: run-in;
   align-items: center;
 }
 
@@ -152,6 +166,136 @@ main {
   margin: 0 1em 0 0;
 }
 
-.button {
-  color: blue;
+.total_spend {
+  color: maroon;
+  font-size: 50px;
+  font: Courier;
+  text-align: center;
+  border: 20px double;
+  border-color: darkgreen;
+  margin: 0 20px 30px 0;
+  padding: 20px;
+  width: 800px;
+  margin-left: 260px;
+}
+
+.fa {
+  padding: 5px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-instagram {
+  background: linear-gradient(to bottom right, purple ,red,  yellow);
+  color: white;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: darkgreen;
+  opacity: 0.5;
+  color: white;
+  text-align: left;
+}
+
+.form-wrapper {
+  text-align: center;
+}
+
+button{
+  background:darkgreen;
+  color:lightgreen;
+  font-style: Courier;
+  border:none;
+  position:relative;
+  height:40px;
+  font-size:1.1em;
+  padding:0 2em;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+  margin-left: 1200px;
+}
+button:hover{
+  background:maroon;
+  color:lightgreen;
+}
+button:before,button:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: #1AAB8A;
+  transition:400ms ease all;
+}
+button:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+button:hover:before,button:hover:after{
+  width:100%;
+  transition:800ms ease all;
+}
+
+a.button1 {
+  background:darkgreen;
+  color:lightgreen;
+  font-style: Courier;
+  border:none;
+  position:relative;
+  height:40px;
+  font-size:1.1em;
+  padding:0 2em;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+  margin-left: 600px;
+}
+a.button1:hover{
+  background:maroon;
+  color:lightgreen;
+}
+a.button1:before,a.button1:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: #1AAB8A;
+  transition:400ms ease all;
+}
+a.button1 :after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+a.button1:hover:before,a.button1:hover:after{
+  width:100%;
+  transition:800ms ease all;
+
 }
