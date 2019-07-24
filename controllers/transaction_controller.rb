@@ -82,3 +82,7 @@ get '/types/' do
   @type = Type.all
   erb(:"types/index")
 end
+
+get '/sitemap' do
+  erb(:sitemap)
+end

@@ -108,7 +108,7 @@ p {
 
 
 a, a:link, a:visited {
-  color: maroon;
+  color: white;
   text-decoration: none;
 }
 
@@ -297,5 +297,14 @@ a.button1 :after{
 a.button1:hover:before,a.button1:hover:after{
   width:100%;
   transition:800ms ease all;
+}
 
+a.merch {
+  color: maroon;
+  margin-left: 50px;
+}
+
+.img1 {
+  height: 340px;
+  padding-top: 60px;
 }
