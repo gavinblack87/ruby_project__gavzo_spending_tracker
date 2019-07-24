@@ -1,6 +1,7 @@
 input[type="submit"] {
-  text-transform: uppercase;
+  text-transform: capitalize;
   font-family: Courier, cursive;
+  font-weight: bold;
 }
 
 select {
@@ -9,7 +10,6 @@ select {
  margin: 15px 0;
  font-size: 0.8em;
  -webkit-appearance: none;
- background: url('/images/hazard.png') 96% / 15% no-repeat papayawhip;
  font-family: 'Merriweather', serif;
  border: 1px solid #eee;
  display: block;
