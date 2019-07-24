@@ -6,7 +6,7 @@
 <p>Date: <%= @transactions.trans_date %></p>
 
 <a href="/transactions/<%= @transactions.id %>/edit">Edit</a>
-<p><form action="/transactions/<%= @transactions.id %>/delete" method="POST">
+<p><form action="/transactions/<%= @transactions.id %>/delete" method="POST" onclick="return confirm('Delete from database forever?');">
   <input type="submit" value="Delete"/>
 </form>
 </p>
